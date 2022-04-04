@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/turnTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn X"
+        android:textAllCaps="false"
+        android:textColor="@color/teal_700"
+        android:textSize="40sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--
+    Baris 14 adalah textview yang akan memberitahukan giliran kepada ke 2 pemain
+
+    -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--
+        Baris ke 33 adalah pembuatan constraint dimension ratio berukuran 1:1,dimana hasilnya merupakan sebuah persegi
+        Baris ke 30 membuat kerangka orientasi berbentuk vertikal
+        -->
+
+
+        <LinearLayout style="@style/row">
+
+            <Button
+                android:id="@+id/a1"
+                style="@style/column" />
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/a2"
+                style="@style/column" />
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/a3"
+                style="@style/column" />
+          <!--
+            Pada baris 44 menampilkan garis vertikal berwarna biru yang di import dari style.xml
+            Pada baris 46-60 membuat 3 buah button yang nantinya akan di funakan untuk pengguna, button ini di import dari style.xml, button memiliki backgroun transparan jadi tidak terlihat
+            Pada baris 46-60 mengimpor style berupa garis vertikal berwarna ungu yang sudah di buat pada style.xml
+            Pada baris 46-60 membuat setiap button dengan id masing masing urut dari baris kiri ke kanan sehingga dalam satu row ada buttom a1,a2,a3
+          -->
+        </LinearLayout>
+
+        <View style="@style/horizontalLine" />
+
+        <LinearLayout style="@style/row">
+
+            <Button
+                android:id="@+id/b1"
+                style="@style/column" />
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/b2"
+                style="@style/column" />
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/b3"
+                style="@style/column" />
+
+        </LinearLayout>
+
+         <!--
+            Pada baris 69 menampilkan garis vertikal berwarna biru yang di import dari style.xml
+            Pada baris 73-87 membuat 3 buah button yang nantinya akan di funakan untuk pengguna, button ini di import dari style.xml, button memiliki backgroun transparan jadi tidak terlihat
+            Pada baris 73-87 mengimpor style berupa garis vertikal berwarna ungu yang sudah di buat pada style.xml
+            Pada baris 73-87 membuat setiap button dengan id masing masing urut dari baris kiri ke kanan sehingga dalam satu row ada buttom b1,b2,b3
+          -->
+
+        <View style="@style/horizontalLine" />
+
+        <LinearLayout style="@style/row">
+
+            <Button
+                android:id="@+id/c1"
+                style="@style/column" />
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/c2"
+                style="@style/column" />
+
+            <View style="@style/verticalLine" />
+
+            <Button
+                android:id="@+id/c3"
+                style="@style/column" />
+
+        </LinearLayout>
+
+        <!--
+            Pada baris 98 menampilkan garis vertikal berwarna biru yang di import dari style.xml
+            Pada baris 102-116 membuat 3 buah button yang nantinya akan di funakan untuk pengguna, button ini di import dari style.xml, button memiliki backgroun transparan jadi tidak terlihat
+            Pada baris 102-116 mengimpor style berupa garis vertikal berwarna ungu yang sudah di buat pada style.xml
+            Pada baris 102-116 membuat setiap button dengan id masing masing urut dari baris kiri ke kanan sehingga dalam satu row ada buttom c1,c2,c3
+         -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How To Play"
+        android:textColor="#009688"
+        android:textColorHint="#F44336"
+        app:iconTint="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
